@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Palmera</title>
+        <style>
+        body {
+            background: #97c6e5;
+            margin: 0;
+          }
+          </style>
+    </head>
+    <body>
+        <script>
+            let Mejoras=1
+            let Cacahuetes=0
+            let Camarones=0
+            let Abuelitas=0
+            let Osos=0
+            let Pulpos=0
+            let Ranas=0
+        </script>
+        <script>
+            let X2=0
+        </script>
+        <img src="image/TRM.png" id="Trampa">
+        <script>
+            let Trm = document.getElementById("Trampa");
+            Trm.ondblclick = TM 
+            function TM(){
+                Cacahuetes=Cacahuetes+99999999999
+            }
+        </script>
+        <div align="center">
+            <p <button id="Palmeras" name="P" type="submit">
+                <img src="image/palmera2.png" width="150" height="160" vspace=""></button> </p>
+        </div>
+        <img src="image/CacahueteP.png" id="Particula" width="0" height="0">
+        <div align="center" id="contador"><font face="Arial">0</font></div>
+        <br>
+        <div align="center"> <!--Items-->
+            <img src="image/BotonC.png" width="60" height="50" id="Camarones">
+            <img src="image/BotonA.png" width="60" height="50" id="Abuelitas">
+            <img src="image/BotonO.png" width="60" height="50" id="Osos">
+            <img src="image/BotonP.png" width="60" height="50" id="Pulpos">
+            <img src="image/BotonR.png" width="60" height="50" id="Ranas">
+        </div>
+        <br>
+        <div align="center"><!--Mejoras-->
+            <img src="image/X2.png" width="100" height="50" id="X2">
+        </div>
+            <script>
+                setInterval(function(){
+                    let CH = localStorage.getItem("Cacahuetes")
+                    Cacahuetes=CH
+                },100);
+
+                function Car(){
+                }
+            </script>
+        </div>
+            <br><br>
+        </div>
+            <script>
+                let p = document.getElementById("Palmeras");
+                p.onclick = Pal; 
+                  
+                function Pal(evento) {
+                    Cacahuetes++
+                    localStorage.setItem("Cacahuetes", Cacahuetes)
+                    console.log("Cacahuetes: ",Cacahuetes)
+                }
+            </script>
+            <script>
+                let c = document.getElementById("Camarones"); 
+                c.onclick = Cam; 
+
+                let PrecioC=10
+                function Cam(evento) {
+                    if(Cacahuetes>PrecioC){
+                Camarones++
+                console.log("Camarones: ",Camarones)
+                Cacahuetes=Cacahuetes-PrecioC
+                PrecioC=PrecioC*2
+                    }
+                    if(Camarones>0){
+                        setInterval(function(){
+                        Cacahuetes++
+                        localStorage.setItem("Cacahuetes", Cacahuetes)
+                        },1000);
+                    }
+                }
+                let a = document.getElementById("Abuelitas"); 
+                a.onclick = Abu; 
+
+                let Precio=25
+                function Abu(evento) {
+                    if(Cacahuetes>Precio){
+                console.log("Abuelitas: ",Abuelitas)
+                Abuelitas++
+                Cacahuetes=Cacahuetes-Precio
+                Precio=Precio*2
+                    }
+                    if(Abuelitas>0){
+                        setInterval(function(){
+                        Cacahuetes=Cacahuetes+2
+                        localStorage.setItem("Cacahuetes", Cacahuetes)
+                        },1000);
+                    }
+                }
+                let o = document.getElementById("Osos"); 
+                o.onclick = Oso; 
+
+                let PrecioO=50
+                function Oso(evento) {
+                    if(Cacahuetes>PrecioO){
+                console.log("Osos: ",Osos)
+                Osos++
+                Cacahuetes=Cacahuetes-PrecioO
+                PrecioO=PrecioO*2
+                    }
+                    if(Osos>0){
+                        setInterval(function(){
+                        Cacahuetes=Cacahuetes+5
+                        localStorage.setItem("Cacahuetes", Cacahuetes)
+                        },1000);
+                    }
+                }
+                let pl = document.getElementById("Pulpos"); 
+                pl.onclick = Pul; 
+
+                let PrecioP=100
+                function Pul(evento) {
+                    if(Cacahuetes>PrecioP){
+                console.log("Pulpos: ",Pulpos)
+                Pulpos++
+                Cacahuetes=Cacahuetes-PrecioP
+                PrecioP=PrecioP*2
+                    }
+                    if(Pulpos>0){
+                        setInterval(function(){
+                        Cacahuetes=Cacahuetes+10
+                        localStorage.setItem("Cacahuetes", Cacahuetes)
+                        },1000);
+                    }
+                }
+                let r = document.getElementById("Ranas"); 
+                r.onclick = Ran; 
+
+                let PrecioR=500
+                function Ran(evento) {
+                    if(Cacahuetes>PrecioR){
+                console.log("Ranas: ",Ranas)
+                Ranas++
+                Cacahuetes=Cacahuetes-PrecioR
+                PrecioR=PrecioR*2
+                    }
+                    if(Ranas>0){
+                        setInterval(function(){
+                        Cacahuetes=Cacahuetes+20
+                        localStorage.setItem("Cacahuetes", Cacahuetes)
+                        },1000);
+                    }
+                }
+            </script>
+            <script>
+                let Por2 = document.getElementById("X2"); 
+                Por2.onclick = x2; 
+
+                let PrecioX2=150
+                function x2(evento) {
+                    if(Cacahuetes>PrecioX2){
+                console.log("Se compro X2")
+                X2=1
+                Cacahuetes=Cacahuetes-PrecioX2
+                PrecioX2=PrecioX2*2
+                    }
+                    if(X2=1){
+                        Mejoras=2
+                        PrecioX2=0
+                    }
+                }
+            </script>
+            <script>
+                setInterval(function(){
+                },1000);
+            </script>
+            <script>
+                function render(){
+                    document.getElementById("contador").innerHTML = Cacahuetes;
+                }
+
+                var FPS = 30;
+
+                setInterval(function(){
+                render();
+                },1000/FPS);
+            </script>
+        </div>
+    </body>
+</html>
